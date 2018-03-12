@@ -1,0 +1,45 @@
+server:
+ port: 8181
+logging:
+ level:
+  cyz.boot: debug
+spring: 
+ mysql-datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://172.16.6.44:3306/qone?useSSL=false
+  password: qkapp_123
+  username: qkapp
+ mysql-qone-datasource:
+  driver-class-name: com.mysql.jdbc.Driver
+  url: jdbc:mysql://172.16.6.44:3306/qkpie?useSSL=false&allowMultiQueries=true
+  password: qkapp_123
+  username: qkapp
+  #用q易借的mq
+ rabbitmq: 
+  host: 172.16.6.51
+  port: 5672
+  username: user2
+  password: user2@321
+  virtual-host: /qyjbus
+  enable: true
+ data:
+  mongodb:
+   uri: mongodb://localhost:27017/test
+#   uri: mongodb://name:pass@localhost:27017/test
+#多个IP集群可以采用以下配置
+#spring.data.mongodb.uri=mongodb://user:pwd@ip1:port1,ip2:port2/database
+rest:
+   connection:
+      connectionRequesTimeout: 30000
+      connectionTimeout: 30000
+      connectionReadTimeout: 30000
+
+mongodb:
+  primary:
+    host: 127.0.0.1
+    port: 27017
+    database: test
+  secondary:
+    host: 127.0.0.1
+    port: 27017
+    database: test1

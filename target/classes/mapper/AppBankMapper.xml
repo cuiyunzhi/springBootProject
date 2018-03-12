@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cyz.boot.test.dao.AppBankMapper" >
+  <resultMap id="BaseResultMap" type="cyz.boot.test.model.AppBank" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="bank_type" property="bankType" jdbcType="VARCHAR" />
+    <result column="bank_name" property="bankName" jdbcType="VARCHAR" />
+    <result column="bank_remark" property="bankRemark" jdbcType="VARCHAR" />
+    <result column="enable" property="enable" jdbcType="DECIMAL" />
+    <result column="city_code" property="cityCode" jdbcType="VARCHAR" />
+    <result column="city_name" property="cityName" jdbcType="VARCHAR" />
+    <result column="img_path" property="imgPath" jdbcType="VARCHAR" />
+    <result column="pay_limit" property="payLimit" jdbcType="DECIMAL" />
+    <result column="use_flag" property="useFlag" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+</mapper>
