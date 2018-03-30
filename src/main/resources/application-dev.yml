@@ -22,6 +22,8 @@ spring:
   password: user2@321
   virtual-host: /qyjbus
   enable: true
+ redis:
+  clusterUrl: http://172.29.150.1:8585/cache/client/redis/cluster/10003.json?clientVersion=1.0-SNAPSHOT
  data:
   mongodb:
    uri: mongodb://localhost:27017/test
